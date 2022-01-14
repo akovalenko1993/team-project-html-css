@@ -1,0 +1,42 @@
+.header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.header-wrap {
+  padding: 6px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.mobile-menu__open {
+  background-color: transparent;
+  border: none;
+  display: block;
+  padding: 0;
+  height: 12px;
+  margin-left: auto;
+}
+
+.mobile-menu {
+  width: 254px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #e17992;
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  &__close {
+    display: block;
+    margin-left: auto;
+    margin-top: 23px;
+    margin-right: 24px;
+    background-color: transparent;
+    border: none;
+  }
+}
