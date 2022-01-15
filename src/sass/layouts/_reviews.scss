@@ -27,40 +27,22 @@
 }
 
 .customer-comment-wrapper {
-  padding: 70px 50px 20px;
+  padding: 47px 50px 20px;
   margin-bottom: 30px;
 
   @media screen and(min-width:768px) {
     width: 620px;
   }
-  @media screen and(min-width:1280px) {
+  @media screen and(min-width:1200px) {
     width: 926px;
-  }
-}
-
-.customer-comment {
-  display: block;
-  width: 180px;
-  height: 240px;
-  margin-bottom: 30px;
-
-  @media screen and(min-width:480px) {
-    margin-left: auto;
-    margin-right: auto;
-    width: 330px;
-    height: 105px;
-  }
-  @media screen and(min-width:768px) {
-    margin-left: auto;
-    margin-right: auto;
-    width: 450px;
-    height: 90px;
   }
 }
 
 .customer-text {
   position: relative;
   padding: 0 20px;
+  top: 0;
+  left: 0;
   text-align: center;
   font-family: $main-font;
   font-style: normal;
@@ -78,9 +60,11 @@
 
   @media screen and(min-width:768px) {
     width: 460px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  @media screen and(min-width:1280px) {
+  @media screen and(min-width:1200px) {
     width: 822px;
     font-size: 16px;
     line-height: 1.86;
@@ -99,6 +83,15 @@
   background-repeat: no-repeat;
   z-index: -1;
   background-image: url('/images/Сustomer-reviews/icons/quotes.svg');
+
+  @media screen and(min-width:768px) {
+    left: -20px;
+  }
+
+  @media screen and(min-width:1200px) {
+    top: -13px;
+    left: -24px;
+  }
 }
 
 .customer-name-thumb {
@@ -124,7 +117,7 @@
 .slick-dots li {
   height: 12px;
   width: 12px;
-  margin: auto 5px;
+  margin: auto 9px;
   padding: 0;
 }
 .slick-dots li button {
@@ -138,6 +131,8 @@
 }
 
 .slick-dots li button:before {
+  line-height: 12px;
+  font-size: 12px;
   height: 12px;
   width: 12px;
   color: $vector-ellipse-color;
