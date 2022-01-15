@@ -152,3 +152,21 @@ h6 {
 
 .products__icon {
 }
+
+// попробовать добавить кнопку на Products
+// ДОБАВЛЯЮ ДВА КЛАССА
+.products__bla-bla-bla {
+  width: 600px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: white;
+
+  transform: translateX(-105%);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+}
+
+.is-shown {
+  transform: translateX(0);
+}
