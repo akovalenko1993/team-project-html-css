@@ -27,6 +27,7 @@
   top: 0;
   right: 0;
   background-color: #e17992;
+  z-index: 5;
   &.is-hidden {
     // opacity: 0;
     transform: translateX(100%);
@@ -48,7 +49,7 @@
   font-family: $main-font;
   font-weight: bold;
   font-size: 16px;
-  line-height: 21px;
+  line-height: 1.3125;
   display: flex;
   align-items: center;
   text-align: center;
@@ -82,7 +83,7 @@
 .mob-menu__link {
   font-weight: bold;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 1.28;
   align-items: center;
   color: $main-white-color;
   transition: color $transition-duration $timing-function;
