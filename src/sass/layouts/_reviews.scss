@@ -1,0 +1,50 @@
+.customer-reviews-section {
+  padding: 40px 0;
+}
+
+.customer-section-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.customer-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.customer-img-thumb {
+  margin-bottom: 30px;
+}
+
+.customer-comment {
+  padding: 20px 50px;
+  margin-bottom: 30px;
+}
+.customer-name-thumb {
+  padding-top: 42px;
+  padding-bottom: 52px;
+}
+
+.customer-name-thumb::before {
+}
+
+.customer-text {
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 255%;
+}
+.customer-text::before {
+  background-image: url('./images/Сustomer-reviews/icons/quotes.svg');
+}
