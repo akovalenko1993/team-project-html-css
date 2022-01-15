@@ -1,0 +1,172 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $menu-bg-color;
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: $transition-duration;
+  transition-timing-function: $timing-function;
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    opacity: 0;
+  }
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 96%;
+  height: auto;
+  padding: 40px;
+  background: $main-white-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition-property: transform;
+  transition-duration: $transition-duration;
+  transition-timing-function: $timing-function;
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  @media screen and (min-width: 480px) {
+    width: 450px;
+    height: 609px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 528px;
+    height: 581px;
+  }
+}
+
+.modal__button {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  border-radius: 50%;
+  background: $main-white-color;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  transition-property: border;
+  transition-duration: $transition-duration;
+  transition-timing-function: $timing-function;
+  &:hover,
+  &:focus {
+    border: 1px solid $accent-color;
+  }
+}
+
+.modal__close {
+  width: 18px;
+  height: 18px;
+  fill: $logo-color;
+  transition-property: fill;
+  transition-duration: $transition-duration;
+  transition-timing-function: $timing-function;
+  .modal__button:hover &,
+  .modal__button:focus & {
+    fill: $accent-color;
+  }
+}
+
+.modal__title {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $main-title-color;
+}
+
+.modal__label {
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: $first-text-color;
+}
+
+.modal-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+  padding: 0 10px;
+  padding-left: 42px;
+  background-color: transparent;
+  transition-property: border;
+  transition-duration: $transition-duration;
+  transition-timing-function: $timing-function;
+  &:focus {
+    border: 1px solid $accent-color;
+  }
+  &::placeholder {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: $placeholder-color;
+  }
+}
+
+.modal-input__wrap {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.modal-input__icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(13px, 11px);
+  transition-property: fill;
+  transition-duration: $transition-duration;
+  transition-timing-function: $timing-function;
+  .modal-input:focus + & {
+    fill: $accent-color;
+  }
+}
+
+textarea {
+  resize: none;
+  width: 100%;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  outline: none;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  background-color: transparent;
+  transition-property: border;
+  transition-duration: $transition-duration;
+  transition-timing-function: $timing-function;
+  &:focus {
+    border: 1px solid $accent-color;
+  }
+  &::placeholder {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: $placeholder-color;
+  }
+}
+
+.modal__btn {
+  display: block;
+  margin: 0 auto;
+  color: $accent-color;
+}
