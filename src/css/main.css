@@ -1,0 +1,77 @@
+@charset "UTF-8";
+/*
+ * Главный файл стилей.
+ * Все паршалы подключаются сюда.
+ */
+.header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.header-wrap {
+  padding: 6px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mobile-menu__open {
+  background-color: transparent;
+  border: none;
+  display: block;
+  padding: 0;
+  height: 12px;
+  margin-left: auto;
+}
+
+.mobile-menu {
+  width: 254px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #e17992;
+}
+
+.mobile-menu.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mobile-menu__close {
+  display: block;
+  margin-left: auto;
+  margin-top: 23px;
+  margin-right: 24px;
+  background-color: transparent;
+  border: none;
+}
+
+.header--btn {
+  font-family: "DM Sans", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: #d41443;
+  background-color: #ffffff;
+  border: none;
+  width: auto;
+  padding: 11px 49px;
+  border-radius: 22px;
+  margin-top: 23px;
+  margin-right: auto;
+  margin-left: auto;
+}
+/*# sourceMappingURL=main.css.map */
