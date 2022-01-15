@@ -1,0 +1,69 @@
+.contacts__subtitle-cafe {
+  font-family: $main-font;
+  text-transform: uppercase;
+  font-size: 12px;
+  background-color: $coffee-card-bg-color;
+  width: 80px;
+  border-radius: 4px;
+  text-align: center;
+  color: $main-white-color;
+  letter-spacing: 0.04em;
+  line-height: 1.83;
+}
+.contacts__item {
+  padding: 43px 20px;
+  max-width: 220px;
+  border-radius: 24px;
+  box-shadow: 0px 8px 30px 0px rgba(212, 20, 67, 0.1);
+}
+.contacts__wrap {
+  padding-bottom: 25px;
+  padding-top: 25px;
+  border-bottom: 1px solid rgba(225, 225, 225, 1);
+}
+
+.contacts__wrap:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.contacts__location {
+  font-size: 12px;
+  color: $second-text-color;
+  letter-spacing: 0.04em;
+  line-height: 1.83;
+  margin-bottom: 10px;
+}
+.contacts__location-text {
+  font-size: 12px;
+  color: $third-text-color;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+}
+.contacts__date {
+  font-size: 12px;
+  color: $second-text-color;
+  letter-spacing: 0.04em;
+  line-height: 1.83;
+}
+.contacts__time {
+  font-size: 12px;
+  color: $secondary-accent-color;
+  letter-spacing: 0.04em;
+  line-height: 1.83;
+}
+.contacts__tel-link,
+.contacts__mail-link {
+  font-size: 12px;
+  color: $third-text-color;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  transition: $transition-duration, $timing-function;
+}
+.contacts__tel-link:hover,
+.contacts__mail-link:hover,
+.contacts__tel-link:focus,
+.contacts__mail-link:focus {
+  color: $secondary-accent-color;
+}
+.contacts__subtitle-foodtruck {
+}
