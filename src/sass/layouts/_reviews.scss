@@ -26,25 +26,54 @@
   margin-bottom: 30px;
 }
 
-.customer-comment {
-  padding: 20px 50px;
+.customer-comment-wrapper {
+  padding: 70px 50px 20px;
   margin-bottom: 30px;
 }
-.customer-name-thumb {
-  padding-top: 42px;
-  padding-bottom: 52px;
-}
 
-.customer-name-thumb::before {
+.customer-comment {
+  display: block;
+  width: 180px;
+  height: 240px;
+  margin-bottom: 30px;
 }
 
 .customer-text {
+  position: relative;
+  padding: 0 20px;
+  text-align: center;
   font-family: $main-font;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
-  line-height: 255%;
+  line-height: 2.55;
+  background: repeating-linear-gradient($border-color, 1px, transparent 2px, transparent 31px);
 }
+
 .customer-text::before {
-  background-image: url('./images/Сustomer-reviews/icons/quotes.svg');
+  content: '';
+  display: block;
+  width: 54px;
+  height: 40px;
+  position: absolute;
+  top: -16px;
+  left: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  background-image: url('/images/Сustomer-reviews/icons/quotes.svg');
+}
+
+.customer-name-thumb {
+  padding-bottom: 30px;
+}
+
+.customer-name-thumb::before {
+  content: '';
+  display: block;
+  height: 4px;
+  margin-bottom: 18px;
+  background-image: url('/images/Сustomer-reviews/icons/red-dots.svg');
+  background-position: center;
+  background-repeat: no-repeat;
 }
