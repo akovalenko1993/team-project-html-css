@@ -6,6 +6,7 @@
   height: 100%;
   background: $menu-bg-color;
   opacity: 1;
+  z-index: 10;
   transition-property: opacity;
   transition-duration: $transition-duration;
   transition-timing-function: $timing-function;
@@ -69,7 +70,7 @@
 .modal__close {
   width: 18px;
   height: 18px;
-  fill: $logo-color;
+  fill: $second-text-color;
   transition-property: fill;
   transition-duration: $transition-duration;
   transition-timing-function: $timing-function;
@@ -86,7 +87,7 @@
   line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
-  color: $main-title-color;
+  color: $vector-home-color;
 }
 
 .modal__label {
@@ -94,7 +95,7 @@
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
-  color: $first-text-color;
+  color: $second-text-color;
 }
 
 .modal-input {
@@ -117,7 +118,7 @@
     font-size: 12px;
     line-height: 1.16;
     letter-spacing: 0.01em;
-    color: $placeholder-color;
+    color: $third-text-color;
   }
 }
 
@@ -161,7 +162,7 @@ textarea {
     font-size: 12px;
     line-height: 1.16;
     letter-spacing: 0.01em;
-    color: $placeholder-color;
+    color: $third-text-color;
   }
 }
 
