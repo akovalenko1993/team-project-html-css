@@ -1,0 +1,85 @@
+.hero {
+  width: 100%;
+  height: 502px;
+  background-color: $hero-bg-color;
+  overflow: hidden;
+  position: relative;
+  &-content-thumb {
+    z-index: 2;
+    position: absolute;
+    top: 193px;
+    bottom: 160px;
+  }
+  &-wrap {
+    max-width: 218px;
+    margin-bottom: 19px;
+  }
+  &__title {
+    font-family: $secondary-font;
+    font-size: 26px;
+    line-height: 1.15;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $main-white-color;
+  }
+  &__span {
+    display: block;
+    color: $accent-color;
+    font-size: 48px;
+    line-height: 0.95;
+  }
+}
+
+.hero__btn {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  cursor: pointer;
+  background-color: $main-white-color;
+  border: none;
+  border-radius: 20px;
+  transition: color $transition-duration $timing-function;
+  &:hover,
+  &:focus {
+    background-color: $btn-accent-hover-color;
+  }
+  &--left {
+    min-width: 63px;
+  }
+  &--right {
+    min-width: 83px;
+  }
+}
+
+.hero__link {
+  font-family: $main-font;
+  font-style: normal;
+  font-size: 8px;
+  line-height: 1.25;
+  color: $accent-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color $transition-duration $timing-function;
+  .hero__btn:hover & {
+    color: $btn-hover-color;
+  }
+  .hero__btn:focus & {
+    color: $btn-hover-color;
+  }
+}
+
+.hero-baner-thumb {
+  width: 346px;
+  height: 344px;
+  border-radius: 50%;
+  background-color: $secondary-accent-color;
+  position: absolute;
+  top: 83px;
+  left: 36px;
+}
+
+.hero-baner__img {
+  position: absolute;
+  top: 9px;
+  left: 81px;
+}

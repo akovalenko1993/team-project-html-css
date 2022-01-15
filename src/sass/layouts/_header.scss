@@ -3,6 +3,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 5;
 }
 
 .header-wrap {
@@ -27,7 +28,7 @@
   top: 0;
   right: 0;
   background-color: #e17992;
-  z-index: 1;
+  z-index: 5;
   &.is-hidden {
     // opacity: 0;
     transform: translateX(100%);
