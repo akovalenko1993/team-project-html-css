@@ -7,9 +7,12 @@
 }
 
 .header-wrap {
-  padding: 6px 20px;
+  padding-top: 6px;
   display: flex;
   align-items: center;
+  @media screen and (min-width: 768px) {
+    padding-top: 37px;
+  }
 }
 
 .mobile-menu__open {
@@ -19,6 +22,18 @@
   padding: 0;
   height: 12px;
   margin-left: auto;
+  @media screen and (min-width: 768px) {
+    margin-right: 30px;
+  }
+}
+
+.header__btn--tablet {
+  display: none;
+  padding: 11px 0;
+  min-width: 160px;
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
 }
 
 .mobile-menu {
@@ -52,25 +67,31 @@
   font-weight: bold;
   font-size: 16px;
   line-height: 1.3125;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  margin-bottom: 19px;
+
   cursor: pointer;
   color: $accent-color;
   background-color: $main-white-color;
   border: none;
-  width: auto;
-  padding: 11px 49px;
+
   border-radius: 22px;
-  margin-top: 23px;
-  margin-right: auto;
-  margin-left: auto;
+
   transition: color $transition-duration $timing-function;
   &:hover {
     background-color: $btn-accent-hover-color;
     color: $btn-hover-color;
   }
+}
+
+.header__btn--mob {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 19px;
+  width: auto;
+  padding: 11px 49px;
+  margin-top: 23px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .mob-menu__item {
