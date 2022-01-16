@@ -1,5 +1,16 @@
 .customer-reviews {
-  padding: 40px 0;
+  padding-top: 80px;
+  padding-bottom: 43px;
+
+  @media screen and(min-width:768px) {
+    padding-top: 121px;
+    padding-bottom: 60px;
+  }
+
+  @media screen and(min-width:1200px) {
+    padding-top: 123px;
+    padding-bottom: 65px;
+  }
 }
 
 .slide__customer-card {
