@@ -3,9 +3,6 @@
   padding-bottom: 39px;
 }
 .about {
-  max-width: 1280px;
-  margin-left: auto;
-  margin-right: auto;
   background-image: url(/images/About/about-bg-mob@1x.png);
   background-repeat: no-repeat;
   background-position: 50% 88%;
@@ -21,6 +18,15 @@
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     background-image: url(/images/About/about-bg-desktop@2x.png);
   }
+}
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-wraper {
+  display: flex;
+  flex-direction: column;
 }
 .about__label {
   font-family: $secondary-font;
@@ -45,11 +51,12 @@
   text-transform: uppercase;
   color: $accent-color;
 }
-.about__thumb {
+.about-wraper__text {
+  display: flex;
   justify-content: center;
-  position: relative;
+  flex-direction: column;
 }
-.about__text-first {
+.about-wraper__text-first {
   margin-top: 47px;
   margin-bottom: 47px;
   width: 220px;
@@ -59,10 +66,10 @@
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
+  line-height: 1.58;
   color: $second-text-color;
 }
-.about__text-second {
-  // position: absolute;
+.about-wraper__text-second {
   margin-bottom: 47px;
   width: 220px;
   height: 155px;
@@ -71,7 +78,7 @@
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
-  line-height: 162%;
+  line-height: 1.58;
   color: $third-text-color;
 }
 .about__button {
@@ -96,18 +103,7 @@
   position: relative;
   justify-content: center;
   margin-left: 30px;
-}
-.button__icon {
-  margin-left: 14px;
-}
-.about-baner-thumb {
-  position: absolute;
-  top: 750px;
-  left: 0;
-  width: 320px;
-  height: 133px;
-}
-.about-baner {
-  // position: absolute;
-  margin: 0;
+  &-icon {
+    margin-left: 14px;
+  }
 }
