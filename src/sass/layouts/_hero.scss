@@ -3,7 +3,10 @@
   height: 502px;
   background-color: $hero-bg-color;
   overflow: hidden;
-  position: relative;
+  &-thumb {
+    position: relative;
+  }
+
   &-content-thumb {
     z-index: 2;
     position: absolute;
