@@ -76,10 +76,32 @@
   position: absolute;
   top: 83px;
   left: 36px;
+  animation-duration: 1s;
+  animation-name: thumb;
+}
+
+@keyframes thumb {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 83px;
+  }
 }
 
 .hero-baner__img {
   position: absolute;
-  top: 9px;
-  left: 81px;
+  top: 92px;
+  left: 117px;
+  animation-duration: 2.5s;
+  animation-name: baner;
+}
+
+@keyframes baner {
+  from {
+    left: 150%;
+  }
+  to {
+    left: 117px;
+  }
 }

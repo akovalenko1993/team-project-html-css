@@ -29,11 +29,11 @@
   right: 0;
   background-color: #e17992;
   z-index: 5;
-  transition: transform $transition-duration $timing-function;
+  transition: transform 1s $timing-function;
   &.is-hidden {
     // opacity: 0;
     transform: translateX(100%);
-    transition: transform $transition-duration $timing-function;
+    transition: transform 1s $timing-function;
     pointer-events: none;
   }
   &__close {
