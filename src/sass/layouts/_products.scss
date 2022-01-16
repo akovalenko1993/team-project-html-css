@@ -110,37 +110,26 @@ h6 {
   text-transform: uppercase;
   color: $main-white-color;
 }
+
 .products__item-title::after {
   content: '...';
   display: block;
   letter-spacing: 4px;
   margin: 0;
-  margin-bottom: 30px;
-  //   padding-top: 30px;
+  margin: 30px 0;
   //   @media screen and(min-width: 1280px) {
   //     padding-top: 32px;
   //   }
 }
 
-// .products__item-description {
-//   // width: 200px;
-//   // height: 124px;
-//   // left: 61px;
-//   // top: 1089px;
-//   // font-family: DM Sans;
-//   // font-style: normal;
-//   // font-weight: bold;
-//   // font-size: 14px;
-//   // line-height: 152%;
-//   // /* or 21px */
-//   // text-align: center;
-//   // letter-spacing: 0.04em;
-//   // color: #FFFFFF;
-// }
+.products__item-description {
+  position: relative;
+}
 .products__item-text {
+  position: relative;
   width: 200px;
   height: 124px;
-  margin-bottom: 30px;
+  margin-bottom: 45px;
   font-family: $main-font;
   font-weight: 700;
   font-size: 14px;
@@ -153,12 +142,18 @@ h6 {
 .products__icon {
 }
 
+.products__button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
 // попробовать добавить кнопку на Products
 // ДОБАВЛЯЮ ДВА КЛАССА
 .products__bla-bla-bla {
   width: 600px;
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 0;
   background-color: white;
 
