@@ -1,10 +1,22 @@
 .footer {
+  padding-top: 73px;
+  padding-bottom: 22px;
   position: relative;
   background-color: $secondary-bg-color;
 
+  @media screen and (min-width: 768px) {
+    padding-top: 118px;
+    padding-bottom: 18px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 125px;
+    padding-bottom: 10px;
+  }
+
   &::after {
     position: absolute;
-    top: 321px;
+    top: 394px;
     left: 0;
     content: '';
     width: 100%;
@@ -12,7 +24,11 @@
     background: $border-color;
 
     @media screen and (min-width: 768px) {
-      top: 274px;
+      top: 392px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      top: 337px;
     }
   }
 
@@ -20,10 +36,13 @@
     @media screen and (min-width: 768px) {
       display: flex;
       justify-content: space-between;
+      align-items: flex-start;
     }
   }
 
   &__text-top-first {
+    margin-left: 0;
+
     width: 232px;
     @include font(18px, 1.17, $secondary-accent-color, $secondary-font);
     text-transform: uppercase;
@@ -32,10 +51,16 @@
       width: 340px;
       @include font(26px, 1.15, $secondary-accent-color, $secondary-font);
     }
+
+    @media screen and (min-width: 1200px) {
+      width: 472px;
+      @include font(30px, 1.13, $secondary-accent-color, $secondary-font);
+    }
   }
 
   &__text-top-sec {
     margin-top: 17px;
+    margin-left: 0;
 
     width: 200px;
     @include font(34px, 1.14, $accent-color, $secondary-font);
@@ -47,6 +72,13 @@
       width: 340px;
       @include font(48px, 1.15, $accent-color, $secondary-font, 0.06em);
     }
+
+    @media screen and (min-width: 1200px) {
+      margin-top: 15px;
+
+      width: 477px;
+      @include font(58px, 1.14, $accent-color, $secondary-font, 0.06em);
+    }
   }
 
   &__list {
@@ -55,8 +87,18 @@
 
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     width: 152px;
+
+    @media screen and (min-width: 768px) {
+      margin-top: 0;
+      width: 162px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 151px;
+    }
   }
 
   &__link {
@@ -64,10 +106,15 @@
     justify-content: center;
     align-items: center;
 
-    width: 34px;
-    height: 34px;
+    width: 32px;
+    height: 32px;
     background-color: #fea5bb;
     border-radius: 50%;
+
+    @media screen and (min-width: 768px) {
+      width: 34px;
+      height: 34px;
+    }
 
     &:hover,
     &:focus {
@@ -76,6 +123,8 @@
   }
 
   &__icon {
+    width: 100%;
+    height: 100%;
     fill: $main-white-color;
   }
 
@@ -85,26 +134,44 @@
     @include font(12px, 1.86, $second-text-color);
     font-weight: 700;
     text-align: right;
+
+    @media screen and (min-width: 768px) {
+      @include font(14px, 1.86, $second-text-color);
+    }
   }
 
   &__tel {
     @include font(12px, 1.86, $accent-color);
     font-weight: 700;
+
+    @media screen and (min-width: 768px) {
+      @include font(14px, 1.86, $accent-color);
+    }
   }
 
   &__text-bottom {
     margin-top: 65px;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 22px;
 
     width: 150px;
 
     @include font(14px, 1.52, $third-text-color);
+    font-weight: 700;
     text-align: center;
 
     @media screen and (min-width: 768px) {
       margin-top: 120px;
+
+      width: 100%;
+      @include font(14px, 1.86, $third-text-color, $main-font, 0.02em);
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-top: 106px;
+
+      width: 100%;
+      @include font(14px, 1.86, $third-text-color, $main-font, 0.02em);
     }
   }
 }

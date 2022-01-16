@@ -1,0 +1,76 @@
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.advantages {
+  background: $secondary-bg-color;
+  padding-top: 39px;
+  padding-bottom: 97px;
+}
+
+// .advantages-list {
+//   @media screen and (min-width: 768px) {
+//     display: flex;
+//     flex-direction: column;
+//   }
+// }
+
+.advantages-list_item {
+  margin-bottom: 38px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.icon1 {
+  &::before {
+    content: url('/images/Advantages/icon1.png');
+    width: 33px;
+    height: 50px;
+  }
+}
+
+.icon2 {
+  &::before {
+    content: url('/images/Advantages/icon2.png');
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.icon3 {
+  &::before {
+    content: url('/images/Advantages/icon3.png');
+    width: 44px;
+    height: 50px;
+  }
+}
+
+.advantages-list_text-number {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  font-family: $secondary-font;
+  font-size: 36px;
+  line-height: 1.14;
+  letter-spacing: 0.04em;
+  color: $accent-color;
+  text-transform: uppercase;
+}
+
+.advantages-list_text {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.7;
+  color: #000000;
+  width: 230px;
+  margin: 0;
+}

@@ -1,0 +1,200 @@
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 auto;
+}
+
+.products {
+  padding-top: 121px;
+  padding-bottom: 98px;
+  text-align: center;
+  @media screen and(min-width: 768px) {
+    padding-top: 122px;
+    padding-bottom: 112px;
+  }
+  @media screen and(min-width: 1280px) {
+    padding-top: 126px;
+    padding-bottom: 119px;
+  }
+}
+
+.products__label-title {
+  margin-bottom: 15px;
+  text-align: center;
+  //   width: 142px;
+  //   height: 21px;
+  font-family: $secondary-font;
+  font-size: 18px;
+  line-height: 1.17;
+  text-align: center;
+  text-transform: uppercase;
+  color: $secondary-accent-color;
+}
+.products__title {
+  margin-bottom: 144px;
+  //   width: 200px;
+  height: 36px;
+  font-family: $secondary-font;
+  font-size: 34px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $accent-color;
+}
+
+.products__list {
+}
+
+.products__item {
+  position: relative;
+  margin: 0 auto;
+  padding-top: 161px;
+  width: 100%;
+  height: 485px;
+  border-radius: 24px;
+  &:not(:last-child) {
+    margin-bottom: 146px;
+  }
+}
+
+.icecream {
+  background: $cream-card-bg-color;
+  &::before {
+    position: absolute;
+    content: url('/images/Products/ice-cream-mob@1x.png');
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.icecoffee {
+  background: $coffee-card-bg-color;
+  &::before {
+    position: absolute;
+    content: url('/images/Products/ice-coffee-mob@1x.png');
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.milkshakes {
+  background: $milkshake-card-bg-color;
+  &::before {
+    position: absolute;
+    content: url('/images/Products/milkshakes-mob@1x.png');
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.products__item-title {
+  margin-bottom: 30px;
+  width: 174px;
+  height: 23px;
+  font-family: $secondary-font;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $main-white-color;
+}
+
+// Эта падлюка не работает(( Не видно эти 3 точки
+
+.products__item-title::after {
+  content: '';
+  display: block;
+  margin: 0;
+  background-image: url('/images/Products/white-dots-divider-mob@1x.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 30px;
+}
+
+.products__item-description {
+  position: relative;
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 66px;
+  margin-bottom: 41px;
+}
+
+.products__item-text {
+  width: 100%;
+  height: 124px;
+  margin-bottom: 30px;
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: $main-white-color;
+
+  // Не понимаю, почему не срабатывает эта функция(((
+
+  .products__bla-bla-bla.is-shown & {
+    display: none;
+  }
+}
+
+.products__icon {
+  width: 11px;
+  height: 11px;
+  fill: $accent-color;
+}
+
+.products__button {
+  cursor: pointer;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: $main-white-color;
+  border: none;
+  transition-property: box-shadow;
+  transition-duration: $transition-duration;
+  transition-timing-function: $timing-function;
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.products__bla-bla-bla {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin: 0 auto;
+  padding: 0 15px;
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  color: $main-white-color;
+  background-color: transparent;
+
+  transform: translateX(-105%);
+  transition-timing-function: $timing-function;
+  transition-duration: $transition-duration;
+}
+
+.is-shown {
+  transform: translateX(0);
+}
