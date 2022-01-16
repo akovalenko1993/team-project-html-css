@@ -3,8 +3,24 @@
   padding-bottom: 39px;
 }
 .about {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(/images/About/about-bg-mob@1x.png);
+  background-repeat: no-repeat;
+  background-position: 50% 88%;
+  background-size: contain;
   position: relative;
   background-color: $secondary-bg-color;
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url(/images/About/about-bg-mob@2x.png);
+  }
+  @media screen and (min-width: 1280px) {
+    background-image: url(/images/About/about-bg.png);
+  }
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url(/images/About/about-bg-desktop@2x.png);
+  }
 }
 .about__label {
   font-family: $secondary-font;
@@ -31,6 +47,7 @@
 }
 .about__thumb {
   justify-content: center;
+  position: relative;
 }
 .about__text-first {
   margin-top: 47px;
@@ -45,7 +62,7 @@
   color: $second-text-color;
 }
 .about__text-second {
-  // position: relative;
+  // position: absolute;
   margin-bottom: 47px;
   width: 220px;
   height: 155px;
