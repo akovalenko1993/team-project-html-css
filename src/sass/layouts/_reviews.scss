@@ -16,6 +16,7 @@
 .slide__review-wrapper {
   padding: 47px 50px 20px;
   margin-bottom: 30px;
+  background: $review-bg-color;
 
   @media screen and(min-width:768px) {
     width: 620px;
@@ -36,6 +37,7 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 2.55;
+  z-index: 3;
   background: repeating-linear-gradient($border-color, 1px, transparent 2px, transparent 31px);
 
   @media screen and(min-width:480px) {
