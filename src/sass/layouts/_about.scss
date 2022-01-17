@@ -12,11 +12,14 @@
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     background-image: url(/images/About/about-bg-mob@2x.png);
   }
+  @media screen and (min-width: 768px) {
+    background-image: none;
+  }
   @media screen and (min-width: 1280px) {
     background-image: url(/images/About/about-bg.png);
-  }
-  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-    background-image: url(/images/About/about-bg-desktop@2x.png);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(/images/About/about-bg-desktop@2x.png);
+    }
   }
 }
 .about-container {
@@ -27,6 +30,17 @@
 .about-wraper {
   display: flex;
   flex-direction: column;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+.about-wraper__pictures {
+  @media screen and (min-width: 768px) {
+    margin-right: 17px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-right: 74px;
+  }
 }
 .about__label {
   font-family: $secondary-font;
@@ -37,6 +51,14 @@
   text-align: center;
   text-transform: uppercase;
   color: $secondary-accent-color;
+  @media screen and (min-width: 768px) {
+    font-size: 26px;
+    line-height: 1.15;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 30px;
+    line-height: 1.13;
+  }
 }
 .about__item {
   width: 200px;
@@ -46,22 +68,32 @@
   font-style: normal;
   font-weight: normal;
   font-size: 34px;
-  line-height: 39px;
+  line-height: 1.15;
   text-align: center;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: $accent-color;
+  @media screen and (min-width: 768px) {
+    font-size: 48px;
+    line-height: 1.15;
+    width: 100%;
+    margin-bottom: 100px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 58px;
+    line-height: 1.14;
+    margin-bottom: 106px;
+  }
 }
 .about-wraper__text {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
 }
 .about-wraper__text-first {
   margin-top: 47px;
   margin-bottom: 47px;
   width: 220px;
-  height: 79px;
   left: 50px;
   font-family: $main-font;
   font-style: normal;
@@ -69,6 +101,20 @@
   font-size: 12px;
   line-height: 1.58;
   color: $second-text-color;
+  @media screen and (min-width: 768px) {
+    width: 340px;
+    font-size: 14px;
+    line-height: 1.78;
+    margin-bottom: 40px;
+    margin-top: 0;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 463px;
+    font-size: 16px;
+    line-height: 1.75;
+    margin-bottom: 35px;
+    margin-top: 0;
+  }
 }
 .about-wraper__text-second {
   margin-bottom: 47px;
@@ -81,6 +127,18 @@
   font-size: 12px;
   line-height: 1.58;
   color: $third-text-color;
+  @media screen and (min-width: 768px) {
+    width: 340px;
+    font-size: 14px;
+    line-height: 1.78;
+    margin-bottom: 82px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 463px;
+    font-size: 14px;
+    line-height: 1.93;
+    margin-bottom: 45px;
+  }
 }
 .about__button {
   position: absolute;
@@ -104,7 +162,24 @@
   position: relative;
   justify-content: center;
   margin-left: 30px;
+  transition: background-color 500ms $timing-function, color 500ms $timing-function;
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: $main-white-color;
+  }
   &-icon {
     margin-left: 14px;
   }
+  @media screen and (min-width: 768px) {
+    margin-left: 0;
+  }
+}
+.about__button-icon {
+  fill: $accent-color;
+  transition: fill 500ms $timing-function;
+}
+.about__button:hover .about__button-icon,
+.about__button:focus .about__button-icon {
+  fill: $main-white-color;
 }
