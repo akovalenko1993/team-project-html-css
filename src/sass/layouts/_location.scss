@@ -8,22 +8,39 @@
   transition: opacity 300ms, visibility 300ms;
   overflow-y: scroll;
 }
-.location {
+
+.location__map {
+  padding: 0;
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 20px;
   background-color: hsl(350, 23%, 95%);
   width: 320px;
-  height: 300px;
+  height: 400px;
   position: absolute;
   border-radius: 4px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(0);
   transition: transform 250ms;
+  @media screen and (min-width: 768px) {
+    width: 750px;
+    height: 500px;
+  }
 }
+
 .is-hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
 }
+// .location__button {
+//   position: absolute;
+//   top: 8px;
+//   right: 8px;
+//   justify-content: center;
+//   border: none;
+//   align-items: center;
+//   cursor: pointer;
+//   transition: transform 300ms cubic-bezier(0.45, 0.55, 0.62, 0.51);
+// }

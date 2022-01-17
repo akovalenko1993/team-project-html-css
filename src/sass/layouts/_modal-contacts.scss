@@ -1,184 +1,201 @@
-// .modal {
-//   background-image: linear-gradient(
-//       90deg,
-//       rgba(240, 84, 181, 0.3701855742296919) 0%,
-//       rgba(255, 255, 255, 0.5270483193277311) 50%,
-//       rgba(69, 252, 197, 0.5) 100%
-//     ),
-//     url('/images/Modal/ice-cream.png');
-//   background-repeat: no-repeat;
-//   padding-left: 15px;
-//   padding-right: 15px;
-//   padding-top: 20px;
-//   width: 320px;
-//   position: absolute;
-//   border-radius: 4px;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -25%);
-//   transition: transform 250ms;
-// }
-// .backdrop {
-//   position: fixed;
-//   width: 100%;
-//   height: 100%;
-//   background-color: rgba(0, 0, 0, 0.2);
-//   top: 0;
-//   left: 0;
-//   transition: opacity 300ms, visibility 300ms;
-//   overflow-y: scroll;
-// }
-// /* .is-hidden {
-//   visibility: hidden;
-//   opacity: 0;
-//   pointer-events: none;
-// } */
-// .modal__button {
-//   position: absolute;
-//   top: 8px;
-//   right: 8px;
-//   justify-content: center;
-//   border: none;
-//   align-items: center;
-//   cursor: pointer;
-//   transition: transform 300ms cubic-bezier(0.45, 0.55, 0.62, 0.51);
-// }
-// .modal__svg {
-//   fill: #000000;
-//   background-color: transparent;
-// }
-// .modal__title {
-//   font-family: Titan One;
-//   font-style: normal;
-//   font-weight: normal;
-//   font-size: 32px;
-//   line-height: 39px;
-//   text-align: center;
-//   letter-spacing: 0.04em;
-//   text-transform: uppercase;
-//   color: #d41443;
-// }
-// .modal__info {
-//   margin-bottom: 10px;
-// }
-// .modal__info-title {
-//   font-family: Titan One;
-//   font-weight: normal;
-//   font-size: 30px;
-//   line-height: 34px;
-//   letter-spacing: 0.04em;
-//   text-align: center;
-//   text-transform: uppercase;
-//   color: #ffa5ba;
-// }
-// .modal__pre-title {
-//   font-family: Titan One;
-//   font-style: normal;
-//   font-weight: normal;
-//   font-size: 20px;
-//   line-height: 26px;
-//   letter-spacing: 0.04em;
-//   text-align: center;
-//   text-transform: uppercase;
-//   color: #d41443;
-// }
-// .modal__item {
-//   text-align: center;
-//   font-family: DM Sans;
-//   font-style: normal;
-//   font-weight: 500;
-//   font-size: 16px;
-//   line-height: 186%;
-//   text-align: center;
-//   letter-spacing: 0.04em;
-//   color: #000000;
-// }
-// .modal__text {
-//   font-family: DM Sans;
-//   font-style: normal;
-//   font-weight: 500;
-//   font-size: 16px;
-//   line-height: 186%;
-//   text-align: center;
-//   letter-spacing: 0.04em;
-//   color: #000000;
-// }
-// .form__modal {
-//   position: relative;
-//   margin-left: 40px;
-//   margin-right: 40px;
-//   margin-bottom: 10px;
-// }
-// .form__svg {
-//   position: absolute;
-//   top: 50%;
-//   left: 10px;
-//   transform: translate(50%);
-//   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-// }
-// .form__label {
-//   font-size: 12px;
-//   line-height: 14px;
-//   letter-spacing: 0.01em;
-//   color: #757575;
-//   margin-bottom: 4px;
-// }
-// .form__input {
-//   padding-left: 15px;
-//   display: flex;
-//   width: 100%;
-//   min-height: 40px;
-//   justify-content: center;
-//   padding-left: 42px;
-//   padding-right: 42px;
+.modal-container {
+  background-image: linear-gradient(
+      90deg,
+      rgba(240, 84, 181, 0.5701855742296919) 0%,
+      rgba(255, 255, 255, 0.6270483193277311) 50%,
+      rgba(69, 252, 197, 0.9) 100%
+    ),
+    url('/images/Modal/ice-cream.png');
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -25%) scale(1);
+  transition: transform 250ms;
+  width: 96%;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 528px;
+  }
+}
+.backdrop-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  top: 0;
+  left: 0;
+  transition: opacity 300ms, visibility 300ms;
+  overflow-y: scroll;
+}
+/* .is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+} */
+.modal-container__button {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(214, 194, 205, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  transition-property: border;
+  transition-duration: $transition-duration;
+  transition-timing-function: $timing-function;
+  &:hover,
+  &:focus {
+    border: 1px solid $accent-color;
+  }
+}
+.modal-container__svg {
+  fill: #000000;
+  background-color: transparent;
+}
+.modal-container__title {
+  font-family: Titan One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 39px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #d41443;
+  margin-bottom: 15px;
+}
 
-//   border: 1px solid rgba(33, 33, 33, 0.2);
-//   box-sizing: border-box;
-//   border-radius: 4px;
-//   outline: none;
-//   &:focus {
-//     border-color: #ffa5ba;
-//   }
-//   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-// }
-// .form__label,
-// .form__text {
-//   font-family: DM Sans;
-//   font-style: normal;
-//   font-weight: 500;
-//   font-size: 16px;
-//   line-height: 176%;
-//   letter-spacing: 0.04em;
-//   color: #000000;
-// }
-// .form__text {
-//   font-size: 25px;
-//   text-align: center;
-// }
-// .modal-svg {
-//   fill: #ffa5ba;
-// }
-// .button-send {
-//   background: #ffffff;
-//   border-radius: 22px;
-//   width: 180px;
-//   height: 44px;
-//   justify-content: center;
-//   align-items: center;
-//   display: block;
-//   cursor: pointer;
-//   font-family: DM Sans;
-//   font-style: normal;
-//   font-weight: bold;
-//   font-size: 16px;
-//   line-height: 21px;
-//   display: flex;
-//   align-items: center;
-//   text-align: center;
-//   color: #000000;
-//   border: none;
-//   &:hover {
-//     background: #d41342;
-//     color: #ffffff;
-//   }
-// }
+.modal-info__title,
+.form__text {
+  font-family: Titan One;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 34px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffa5ba;
+  margin-bottom: 10px;
+}
+.modal__pre-title {
+  font-family: Titan One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #d41443;
+}
+
+.modal-info__text,
+.modal-info__item {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 186%;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #000000;
+}
+.form {
+  margin-top: 15px;
+}
+.form__modal {
+  position: relative;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 10px;
+}
+.form__svg {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translate(50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form__label {
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: #757575;
+  margin-bottom: 4px;
+}
+.form__input {
+  padding-left: 15px;
+  display: flex;
+  width: 100%;
+  min-height: 40px;
+  justify-content: center;
+  padding-left: 42px;
+  padding-right: 42px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  outline: none;
+  &:focus {
+    border-color: #ffa5ba;
+  }
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form__label {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 176%;
+  letter-spacing: 0.04em;
+  color: #000000;
+}
+.form__text {
+  font-size: 25px;
+  text-align: center;
+  color: #000000;
+}
+.modal-info__svg {
+  fill: #ffa5ba;
+}
+.form__modal__icon {
+  position: absolute;
+  top: 55%;
+  left: 10px;
+  transform: translate(50%);
+}
+.button-send-form {
+  background: #ffffff;
+  border-radius: 22px;
+  width: 180px;
+  height: 44px;
+  display: block;
+  cursor: pointer;
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  margin: 0 auto;
+  color: #000000;
+  border: none;
+  &:hover {
+    background: #d41342;
+    color: #ffffff;
+  }
+}
