@@ -3,19 +3,37 @@
   height: 502px;
   background-color: $hero-bg-color;
   overflow: hidden;
+  @media screen and (min-width: 768px) {
+    height: 399px;
+  }
+  &-content {
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
   &-thumb {
+    display: flex;
+    width: 100%;
     z-index: 2;
     position: absolute;
     top: 0;
     left: 0;
   }
-  &-thumb-left {
+
+  &-left {
     padding-top: 193px;
-    padding-bottom: 160px;
+    // padding-bottom: 160px;
+    @media screen and (min-width: 768px) {
+      padding-top: 102px;
+    }
   }
   &-wrap {
     max-width: 218px;
     margin-bottom: 19px;
+    @media screen and (min-width: 768px) {
+      max-width: 162px;
+    }
   }
   &__title {
     font-family: $secondary-font;
@@ -24,12 +42,19 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: $main-white-color;
+    @media screen and (min-width: 768px) {
+      font-size: 22px;
+    }
   }
   &__span {
     display: block;
     color: $accent-color;
     font-size: 48px;
     line-height: 0.95;
+    @media screen and (min-width: 768px) {
+      font-size: 34px;
+      line-height: 0.91;
+    }
   }
 }
 
@@ -39,12 +64,20 @@
   border-radius: 50%;
   background-color: $secondary-accent-color;
   position: relative;
-  margin-top: 83px;
-  margin-left: 36px;
+  top: 83px;
+  left: 36px;
   animation-duration: 1s;
   animation-name: thumb;
   @media screen and (min-width: 480px) {
-    margin-left: 75px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @media screen and (min-width: 768px) {
+    top: 31px;
+    left: 273px;
+    transform: none;
+    width: 324px;
+    height: 322px;
   }
 }
 
@@ -59,13 +92,13 @@
 
 .hero-baner__img {
   position: absolute;
-  top: 92px;
-  left: 117px;
+  top: 9px;
+  left: 81px;
   animation-duration: 2.5s;
   animation-name: baner;
-  @media screen and (min-width: 480px) {
-    left: 156px;
-    animation-name: baner1;
+  @media screen and (min-width: 768px) {
+    top: 32px;
+    left: 71px;
   }
 }
 
@@ -74,16 +107,7 @@
     left: 150%;
   }
   to {
-    left: 117px;
-  }
-}
-
-@keyframes baner1 {
-  from {
-    left: 150%;
-  }
-  to {
-    left: 156px;
+    left: 81px;
   }
 }
 
@@ -122,5 +146,85 @@
   }
   .hero__btn:focus & {
     color: $btn-hover-color;
+  }
+}
+
+.hero-left-bottom {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    margin-top: 19px;
+  }
+}
+
+.text-thumb {
+  max-width: 114px;
+  padding-top: 37px;
+}
+
+.left-bottom__text {
+  font-size: 8px;
+  line-height: 1.75;
+  color: $main-white-color;
+  margin-bottom: 7px;
+}
+
+.after-text__button {
+  width: 18px;
+  height: 18px;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.after-text__icon {
+  fill: $accent-color;
+}
+
+.hero-right {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+    margin-left: auto;
+    padding-top: 99px;
+  }
+  &-top {
+    margin-bottom: 72px;
+  }
+  &__span {
+    font-family: Titan One;
+    font-size: 28px;
+    line-height: 1.14;
+    text-align: right;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    display: block;
+    color: $accent-color;
+    position: relative;
+  }
+  &__span::after {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $main-white-color;
+    position: absolute;
+    top: -5px;
+    right: -8px;
+    z-index: -1;
+  }
+  &__text {
+    font-size: 8px;
+    line-height: 1.25;
+    text-align: right;
+    margin-right: 8px;
+    color: $main-white-color;
+  }
+  &__text:not(:last-child) {
+    margin-bottom: 13px;
   }
 }
