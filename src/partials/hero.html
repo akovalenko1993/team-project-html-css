@@ -1,20 +1,72 @@
 <section class="hero">
-    <div class="hero-baner-thumb">
-    </div>
-    <img class="hero-baner__img"
-        srcset="./images/Hero-header/slider-ice-cream-mob@1x.png 1x, ./images/Hero-header/slider-ice-cream-mob@2x.png 2x"
-        src="./images/Hero-header/slider-ice-cream-mob@1x.png" alt="ice-crem" />
-    <div class="hero-thumb container">
-        <div class="hero-thumb-left">
-            <div class="hero-wrap">
-                <h1 class="hero__title">ice cream made with<span class="hero__span">passion</span></h1>
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-baner-thumb">
+                <picture class="hero-baner__img">
+                    <source
+                        srcset="./images/Hero-header/slider-ice-cream-mob@1x.png 1x, ./images/Hero-header/slider-ice-cream-mob@2x.png 2x"
+                        media="(max-width: 767px)" />
+                    <source
+                        srcset="./images/Hero-header/slider-ice-cream-tablet@1x.png 1x, ./images/Hero-header/slider-ice-cream-tablet@2x.png 2x"
+                        media="(max-width: 1199px)" />
+                    <source
+                        srcset="./images/Hero-header/slider-ice-cream.png 1x, ./images/Hero-header/slider-ice-cream-desktop@2x.png 2x"
+                        media="(min-width: 1200px)" />
+                    <img src="./images/Hero-header/slider-ice-cream.png" alt="ice-crem" />
+                </picture>
             </div>
-            <button type="button" class="hero__btn hero__btn--left">
-                <a href="#products" class="hero__link">Products</a>
-            </button>
-            <button type="button" class="hero__btn hero__btn--right">
-                <a href="#about" class="hero__link">How it’s made?</a>
-            </button>
+            <div class="hero-thumb">
+                    <div class="hero-left">
+                        <div class="hero-wrap">
+                            <h1 class="hero__title">ice cream made with<span class="hero__span">passion</span></h1>
+                        </div>
+                        <button type="button" class="hero__btn hero__btn--left">
+                            <a href="#products" class="hero__link">Products</a>
+                        </button>
+                        <button type="button" class="hero__btn hero__btn--right">
+                            <a href="#about" class="hero__link">How it’s made?</a>
+                        </button>
+                        <div class="hero-left-bottom">
+                            <div class="left-bottom-thumb">
+                                <picture class="left-bottom__img">
+                                    <source
+                                        srcset="./images/Hero-header/slider-milk-tablet@1x.png 1x, ./images/Hero-header/slider-milk-tablet@2x.png 2x"
+                                        media="(max-width: 1199px)" />
+                                    <source
+                                        srcset="./images/Hero-header/slider-milk.png 1x, ./images/Hero-header/slider-milk-desktop@2x.png 2x"
+                                        media="(min-width: 1200px)" />
+                                    <img src="./images/Hero-header/slider-milk.png" alt="milk" />
+                                </picture>
+                            </div>
+                            <div class="left-bottom-content">
+                                <div class="text-thumb">
+                                    <p class="left-bottom__text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                                    </p>
+                                </div>
+                                <button type="button" class="after-text__button">
+                                    <svg class="after-text__icon" width="8" height="8">
+                                        <use href="./images/icons.svg#icon-red-arrow-right"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-right">
+                        <div class="hero-right-top">
+                            <p class="hero-right__text"><span class="hero-right__span">16</span>cafes</p>
+                            <p class="hero-right__text"><span class="hero-right__span">26</span>food trucks</p>
+                        </div>
+                        <picture class="right-bottom__img">
+                            <source
+                                srcset="./images/Hero-header/slider-girl-tablet@1x.png 1x, ./images/Hero-header/slider-girl-tablet@2x.png 2x"
+                                media="(max-width: 1199px)" />
+                            <source srcset="./images/Hero-header/slider-girl.png 1x, ./images/Hero-header/slider-girl-desktop@2x.png 2x"
+                                media="(min-width: 1200px)" />
+                            <img src="./images/Hero-header/slider-girl.png" alt="girl" />
+                        </picture>
+                    </div>
+            </div>
         </div>
     </div>
 </section>
