@@ -12,6 +12,9 @@
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     background-image: url(/images/About/about-bg-mob@2x.png);
   }
+  @media screen and (min-width: 768px) {
+    background-image: none;
+  }
   @media screen and (min-width: 1280px) {
     background-image: url(/images/About/about-bg.png);
   }
@@ -37,6 +40,14 @@
   text-align: center;
   text-transform: uppercase;
   color: $secondary-accent-color;
+  @media screen and (min-width: 768px) {
+    font-size: 26px;
+    line-height: 1.15;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 30px;
+    line-height: 1.13;
+  }
 }
 .about__item {
   width: 200px;
@@ -46,11 +57,20 @@
   font-style: normal;
   font-weight: normal;
   font-size: 34px;
-  line-height: 39px;
+  line-height: 1.15;
   text-align: center;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: $accent-color;
+  @media screen and (min-width: 768px) {
+    font-size: 48px;
+    line-height: 1.15;
+    width: 100%;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 58px;
+    line-height: 1.14;
+  }
 }
 .about-wraper__text {
   display: flex;

@@ -5,7 +5,19 @@
     <div class="about-wraper">
       <picture>
         <source
+          srcset="./images/About/about-milk.png 1x, ./images/About/about-milk-desktop@2x.png 2x"
+          media="(min-width: 1280px)"
+        />
+        <source
+          srcset="
+            ./images/About/about-milk-tablet@1x.png 1x,
+            ./images/About/about-milk-tablet@2x.png 2x
+          "
+          media="(min-width: 768px)"
+        />
+        <source
           srcset="./images/About/about-milk-mob@1x.png 1x, ./images/About/about-milk-mob@2x.png 2x"
+          media="(min-width: 320px)"
         />
         <img src="./images/About/about-milk.png" alt="" />
       </picture>
