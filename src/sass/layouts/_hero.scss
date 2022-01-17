@@ -78,15 +78,25 @@
     transform: none;
     width: 324px;
     height: 322px;
+    animation-name: thumb1;
   }
 }
 
 @keyframes thumb {
   from {
-    margin-top: -100%;
+    top: -500px;
   }
   to {
-    margin-top: 83px;
+    top: 83px;
+  }
+}
+
+@keyframes thumb1 {
+  from {
+    top: -500px;
+  }
+  to {
+    top: 31px;
   }
 }
 
@@ -99,15 +109,25 @@
   @media screen and (min-width: 768px) {
     top: 32px;
     left: 71px;
+    animation-name: baner1;
   }
 }
 
 @keyframes baner {
   from {
-    left: 150%;
+    left: -500px;
   }
   to {
     left: 81px;
+  }
+}
+
+@keyframes baner1 {
+  from {
+    left: -500px;
+  }
+  to {
+    left: 71px;
   }
 }
 
