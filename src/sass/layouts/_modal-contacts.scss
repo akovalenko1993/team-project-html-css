@@ -180,8 +180,6 @@
   border-radius: 22px;
   width: 180px;
   height: 44px;
-  justify-content: center;
-  align-items: center;
   display: block;
   cursor: pointer;
   font-family: DM Sans;
@@ -189,9 +187,11 @@
   font-weight: bold;
   font-size: 16px;
   line-height: 21px;
-  display: flex;
   align-items: center;
+  justify-content: center;
   text-align: center;
+  display: flex;
+  margin: 0 auto;
   color: #000000;
   border: none;
   &:hover {
