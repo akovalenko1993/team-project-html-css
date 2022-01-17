@@ -1,6 +1,6 @@
 .section {
   padding-top: 125px;
-  padding-bottom: 39px;
+  // padding-bottom: 39px;
 }
 .about {
   background-image: url(/images/About/about-bg-mob@1x.png);
@@ -35,14 +35,17 @@
   }
 }
 .about-wraper__pictures {
+  margin-bottom: 47px;
   @media screen and (min-width: 768px) {
     margin-right: 17px;
+    margin-bottom: 0;
   }
   @media screen and (min-width: 1280px) {
     margin-right: 74px;
   }
 }
 .about__label {
+  margin-bottom: 15px;
   font-family: $secondary-font;
   font-style: normal;
   font-weight: normal;
@@ -62,7 +65,6 @@
 }
 .about__item {
   width: 200px;
-  margin-top: 15px;
   margin-bottom: 26px;
   font-family: $secondary-font;
   font-style: normal;
@@ -86,12 +88,15 @@
   }
 }
 .about-wraper__text {
+  padding: 0 50px;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
+  @media screen and (min-width: 768px) {
+    padding: 0;
+  }
 }
 .about-wraper__text-first {
-  margin-top: 47px;
   margin-bottom: 47px;
   width: 220px;
   left: 50px;
@@ -161,7 +166,7 @@
   cursor: pointer;
   position: relative;
   justify-content: center;
-  margin-left: 30px;
+  margin: 0;
   transition: background-color 500ms $timing-function, color 500ms $timing-function;
   &:hover,
   &:focus {
