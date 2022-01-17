@@ -25,19 +25,25 @@ h6 {
 .products__label-title {
   margin-bottom: 15px;
   text-align: center;
-  //   width: 142px;
-  //   height: 21px;
   font-family: $secondary-font;
   font-size: 18px;
   line-height: 1.17;
   text-align: center;
   text-transform: uppercase;
   color: $secondary-accent-color;
+
+  @media screen and(min-width: 768px) {
+    font-size: 26px;
+    line-height: 1.15;
+  }
+  @media screen and(min-width: 1280px) {
+    font-size: 30px;
+    line-height: 1.13;
+  }
 }
+
 .products__title {
   margin-bottom: 144px;
-  //   width: 200px;
-  height: 36px;
   font-family: $secondary-font;
   font-size: 34px;
   line-height: 1.15;
@@ -45,21 +51,66 @@ h6 {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: $accent-color;
+  @media screen and(min-width: 768px) {
+    margin-bottom: 150px;
+    font-size: 48px;
+    line-height: 1.15;
+  }
+  @media screen and(min-width: 1280px) {
+    margin-bottom: 259px;
+    font-size: 58px;
+    line-height: 1.14;
+  }
 }
 
 .products__list {
+  @media screen and(min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: -10px;
+  }
+  @media screen and(min-width: 1280px) {
+    margin: -15px;
+    flex-wrap: nowrap;
+  }
 }
 
 .products__item {
   position: relative;
   margin: 0 auto;
   padding-top: 161px;
-  width: 100%;
+  width: 280px;
   height: 485px;
   border-radius: 24px;
-  &:not(:last-child) {
-    margin-bottom: 146px;
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 146px;
+    }
   }
+
+  @media screen and(min-width: 768px) {
+    margin: 10px;
+    width: 220px;
+  }
+  @media screen and(min-width: 1280px) {
+    margin: 15px;
+    width: 330px;
+  }
+
+  //   .products__bla-bla-bla.is-shown & {
+  //   height: 550px;
+  // }
+}
+//                           ⇈
+// !!!!!!!!! ВОТ Я ЭТУ КОМАНДУ ВНИЗУ ЗАПИСАЛА И ВВЕРХУ ТОЛЬКО В СТИЛЕ SASS, НО ОДИН ХЕР НЕ РАБОТАЕТ(((((
+
+// Хочу, чтоб карточка становилась длинее, когда текст блаблабла показан... команда же верна?
+
+// И еще проблема, скрипт работает только на первой карточке(
+
+.products__bla-bla-bla.is-shown .products__item {
+  height: 550px;
 }
 
 .icecream {
@@ -70,6 +121,13 @@ h6 {
     top: 0;
     left: 50%;
     transform: translate(-50%, -50%);
+    @media screen and(min-width: 768px) {
+      content: url('/images/Products/ice-cream-tablet@1x.png');
+    }
+    @media screen and(min-width: 1280px) {
+      content: url('/images/Products/ice-cream.png');
+      top: -50px;
+    }
   }
 }
 
@@ -81,6 +139,13 @@ h6 {
     top: 0;
     left: 50%;
     transform: translate(-50%, -50%);
+    @media screen and(min-width: 768px) {
+      content: url('/images/Products/ice-coffee-tablet@1x.png');
+    }
+    @media screen and(min-width: 1280px) {
+      content: url('/images/Products/ice-coffee.png');
+      top: -50px;
+    }
   }
 }
 
@@ -92,12 +157,18 @@ h6 {
     top: 0;
     left: 50%;
     transform: translate(-50%, -50%);
+    @media screen and(min-width: 768px) {
+      content: url('/images/Products/milkshakes-tablet@1x.png');
+    }
+    @media screen and(min-width: 1280px) {
+      content: url('/images/Products/milkshakes.png');
+      top: -50px;
+    }
   }
 }
 
 .products__item-title {
-  margin-bottom: 30px;
-  width: 174px;
+  margin-bottom: 66px;
   height: 23px;
   font-family: $secondary-font;
   font-weight: normal;
@@ -107,18 +178,24 @@ h6 {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: $main-white-color;
+
+  @media screen and(min-width: 1280px) {
+    margin-bottom: 70px;
+    font-size: 30px;
+    line-height: 1.13;
+  }
 }
 
-// Эта падлюка не работает(( Не видно эти 3 точки
-
 .products__item-title::after {
-  content: '';
+  position: absolute;
+  top: 44%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: url('/images/Products/white-dots-divider.svg');
   display: block;
-  margin: 0;
-  background-image: url('/images/Products/white-dots-divider-mob@1x.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  margin-bottom: 30px;
+  @media screen and(min-width: 1280px) {
+    top: 45%;
+  }
 }
 
 .products__item-description {
@@ -127,11 +204,41 @@ h6 {
   margin: 0 auto;
   margin-top: 66px;
   margin-bottom: 41px;
+
+  @media screen and(min-width: 768px) {
+    margin-bottom: 40px;
+  }
+  @media screen and(min-width: 1280px) {
+    margin-bottom: 50px;
+    width: 100%;
+  }
 }
 
 .products__item-text {
   width: 100%;
-  height: 124px;
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: $main-white-color;
+
+  @media screen and(min-width: 768px) {
+    line-height: 1.76;
+    margin-bottom: 40px;
+    width: 198px;
+  }
+  @media screen and(min-width: 1280px) {
+    width: 241px;
+    font-size: 16px;
+    line-height: 1.76;
+    margin-bottom: 62px;
+  }
+}
+
+.products__bla-bla-bla {
+  width: 100%;
   margin-bottom: 30px;
   font-family: $main-font;
   font-weight: 700;
@@ -141,10 +248,30 @@ h6 {
   letter-spacing: 0.04em;
   color: $main-white-color;
 
-  // Не понимаю, почему не срабатывает эта функция(((
+  @media screen and(min-width: 768px) {
+    position: absolute;
+    bottom: 15%;
+    left: 0;
+    margin: 0 auto;
+    padding: 0 15px;
+    opacity: 0;
 
-  .products__bla-bla-bla.is-shown & {
-    display: none;
+    transform: translateX(0);
+    transition-timing-function: $timing-function;
+    transition-duration: $transition-duration;
+  }
+  @media screen and(min-width: 1280px) {
+    bottom: 36%;
+    left: 0;
+  }
+}
+
+.is-shown {
+  opacity: 1;
+  line-height: 1.76;
+  @media screen and(min-width: 1280px) {
+    font-size: 16px;
+    line-height: 1.76;
   }
 }
 
@@ -173,28 +300,4 @@ h6 {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
   }
-}
-
-.products__bla-bla-bla {
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  margin: 0 auto;
-  padding: 0 15px;
-  font-family: $main-font;
-  font-weight: 700;
-  font-size: 13px;
-  line-height: 1.2;
-  letter-spacing: 0.04em;
-  color: $main-white-color;
-  background-color: transparent;
-
-  transform: translateX(-105%);
-  transition-timing-function: $timing-function;
-  transition-duration: $transition-duration;
-}
-
-.is-shown {
-  transform: translateX(0);
 }
