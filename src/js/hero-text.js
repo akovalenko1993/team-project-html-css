@@ -1,21 +1,19 @@
-(() => {
-  const refs = {
-    openTextBtn: document.querySelector('[data-modal_text-open]'),
-    text: document.querySelector('[data-text-thumb]')
 
-    
-  };
 
-    refs.openTextBtn.addEventListener('click', toggleText);
+ document.addEventListener('DOMContentLoaded', () => {
 
-  function toggleText() {
-    refs.text.classList.toggle('show-text');
-  }
+  const button = document.querySelector('.after-text__button')
+  const thumb = document.querySelector('.text-thumb')
 
- $(document).mouseup(function (e){  
-  var div = $(".text-thumb");  //класс элемента вне которого клик
-  if (!div.is(e.target) && div.has(e.target).length === 0) {  
-          div.removeClass('show-text');  
-  }
-});
-})();
+  button.addEventListener('click', () => {
+    thumb.classList.toggle('show-text') 
+  })
+
+  window.addEventListener('click', e => {
+    const target = e.target 
+    if (!target.closest('.text-thumb') && !target.closest('.after-text__button')) {
+      thumb.classList.remove('show-text')
+    }
+  })
+
+})

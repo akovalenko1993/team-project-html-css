@@ -114,6 +114,10 @@
     height: 538px;
     animation-name: thumb2;
   }
+  @media screen and (min-width: 1280px) {
+    top: 51px;
+    left: 426px;
+  }
 }
 
 @keyframes thumb {
@@ -324,6 +328,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  &:hover,
+  &:focus {
+    background-image: linear-gradient(90deg, #d0ffd7 0%, #f8f7a9 49%, #f7dce6 80%, #f7f89b 100%);
+    animation: slidebg 5s linear infinite;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
   @media screen and (min-width: 1200px) {
     width: 26px;
     height: 26px;
