@@ -22,15 +22,22 @@
   margin: 0 auto;
   justify-content: center;
   align-items: center;
-
+  /*  .item {
+  } */
+  padding: 0 20px;
   div {
-    padding: 0px 10px 2px 5px;
+    padding: 0px 2px 2px 5px;
 
     /*  width: 150px; */
     margin: 0 -1rem 0.5rem 0;
+    @media screen and(min-width:480px) {
+      padding: 0px 4px 2px 5px;
 
+      /*  width: 150px; */
+      margin: 0 -1rem 0.5rem 0;
+    }
     @media screen and(min-width:768px) {
-      padding: 0px 10px 2px 5px;
+      padding: 0px 4px 2px 5px;
 
       /*  width: 150px; */
       margin: 0 -1rem 0.5rem 0;
@@ -135,6 +142,9 @@
 }
 .item6-7 {
   display: block;
+}
+.item100 {
+  margin-left: 5px;
 }
 .item6 {
   &:hover img {
