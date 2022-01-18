@@ -11,6 +11,6 @@
   refs.closeMenuLink.forEach( n => n.addEventListener('click', toggleMenu));
 
   function toggleMenu() {
-    refs.menu.classList.toggle('is-hidden');
+    refs.menu.classList.toggle('is-show');
   }
 })();
