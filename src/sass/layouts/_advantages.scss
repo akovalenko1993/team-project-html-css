@@ -14,21 +14,21 @@
 .advantages {
   background: $secondary-bg-color;
   padding-top: 39px;
-  padding-bottom: 97px;
+  padding-bottom: 50px;
   @media screen and (min-width: 768px) {
     padding-top: 66px;
-    padding-bottom: 140px;
+    padding-bottom: 70px;
   }
   @media screen and (min-width: 1200px) {
     padding-top: 39px;
+    padding-bottom: 70px;
   }
 }
 
 .advantages-list {
   @media screen and (max-width: 767px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    width: 230px;
+    margin: 0 auto;
   }
   @media screen and (min-width: 768px) {
     display: flex;
@@ -81,7 +81,6 @@
 
 .advantages-list_text-number {
   margin-top: 16px;
-  margin-bottom: 16px;
   font-family: $secondary-font;
   font-size: 36px;
   line-height: 1.14;
@@ -107,9 +106,7 @@
   font-size: 12px;
   line-height: 1.7;
   color: #000000;
-  width: 230px;
-  margin: 0;
-  // display: block;
+  margin-top: 16px;
   @media screen and (min-width: 768px) {
     font-size: 14px;
     width: 100%;
