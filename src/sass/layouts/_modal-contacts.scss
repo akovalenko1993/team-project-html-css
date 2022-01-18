@@ -11,7 +11,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -25%) scale(1);
+  transform: translate(-50%, -35%) scale(1);
   transition: transform 250ms;
   width: 96%;
   padding-left: 15px;
@@ -154,14 +154,14 @@
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form__label {
-  font-family: DM Sans;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 176%;
-  letter-spacing: 0.04em;
-  color: #000000;
+  margin-bottom: 4px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: $second-text-color;
 }
+
 .form__text {
   font-size: 25px;
   text-align: center;
@@ -175,7 +175,15 @@
   top: 55%;
   left: 10px;
   transform: translate(50%);
+  fill: $third-text-color;
+  transition-property: fill;
+  transition-duration: $transition-duration;
+  transition-timing-function: $timing-function;
+  .form__input:focus + & {
+    fill: $accent-color;
+  }
 }
+
 .button-send-form {
   color: #000000;
   background-color: #ffa5ba;
