@@ -25,6 +25,11 @@
 }
 
 .advantages-list {
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
   @media screen and (min-width: 768px) {
     display: flex;
   }
@@ -104,6 +109,7 @@
   color: #000000;
   width: 230px;
   margin: 0;
+  // display: block;
   @media screen and (min-width: 768px) {
     font-size: 14px;
     width: 100%;
