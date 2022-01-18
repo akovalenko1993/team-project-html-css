@@ -83,12 +83,12 @@ h6 {
   width: 280px;
   height: 485px;
   border-radius: 24px;
+
   @media screen and (max-width: 767px) {
     &:not(:last-child) {
       margin-bottom: 146px;
     }
   }
-
   @media screen and(min-width: 768px) {
     margin: 10px;
     width: 220px;
@@ -96,21 +96,8 @@ h6 {
   @media screen and(min-width: 1280px) {
     margin: 15px;
     width: 330px;
+    height: 525px;
   }
-
-  //   .products__bla-bla-bla.is-shown & {
-  //   height: 550px;
-  // }
-}
-//                           ⇈
-// !!!!!!!!! ВОТ Я ЭТУ КОМАНДУ ВНИЗУ ЗАПИСАЛА И ВВЕРХУ ТОЛЬКО В СТИЛЕ SASS, НО ОДИН ХЕР НЕ РАБОТАЕТ(((((
-
-// Хочу, чтоб карточка становилась длинее, когда текст блаблабла показан... команда же верна?
-
-// И еще проблема, скрипт работает только на первой карточке(
-
-.products__bla-bla-bla.is-shown .products__item {
-  height: 550px;
 }
 
 .icecream {
@@ -169,7 +156,6 @@ h6 {
 
 .products__item-title {
   margin-bottom: 66px;
-  height: 23px;
   font-family: $secondary-font;
   font-weight: normal;
   font-size: 20px;
@@ -194,22 +180,18 @@ h6 {
   content: url('/images/Products/white-dots-divider.svg');
   display: block;
   @media screen and(min-width: 1280px) {
-    top: 45%;
+    top: 43%;
   }
 }
 
 .products__item-description {
-  position: relative;
+  // position: relative;
   width: 200px;
   margin: 0 auto;
-  margin-top: 66px;
-  margin-bottom: 41px;
 
   @media screen and(min-width: 768px) {
-    margin-bottom: 40px;
   }
   @media screen and(min-width: 1280px) {
-    margin-bottom: 50px;
     width: 100%;
   }
 }
@@ -225,20 +207,20 @@ h6 {
   color: $main-white-color;
 
   @media screen and(min-width: 768px) {
+    margin-bottom: 4px;
     line-height: 1.76;
-    margin-bottom: 40px;
     width: 198px;
   }
   @media screen and(min-width: 1280px) {
+    margin-bottom: 0;
     width: 241px;
     font-size: 16px;
     line-height: 1.76;
-    margin-bottom: 62px;
   }
 }
 
 .products__bla-bla-bla {
-  width: 100%;
+  width: 198px;
   margin-bottom: 30px;
   font-family: $main-font;
   font-weight: 700;
@@ -247,48 +229,41 @@ h6 {
   text-align: center;
   letter-spacing: 0.04em;
   color: $main-white-color;
+  opacity: 1;
 
   @media screen and(min-width: 768px) {
-    position: absolute;
-    bottom: 15%;
-    left: 0;
-    margin: 0 auto;
-    padding: 0 15px;
     opacity: 0;
-
-    transform: translateX(0);
+    width: 198px;
+    letter-spacing: 0.01em;
+    margin-top: 10px;
+    transform: display;
     transition-timing-function: $timing-function;
     transition-duration: $transition-duration;
+    .reference:checked ~ & {
+      opacity: 1;
+    }
   }
-  @media screen and(min-width: 1280px) {
-    bottom: 36%;
-    left: 0;
-  }
-}
-
-.is-shown {
-  opacity: 1;
-  line-height: 1.76;
   @media screen and(min-width: 1280px) {
     font-size: 16px;
     line-height: 1.76;
+    opacity: 0;
+    .reference:checked ~ & {
+      opacity: 1;
+      width: 241px;
+    }
   }
 }
 
-.products__icon {
-  width: 11px;
-  height: 11px;
-  fill: $accent-color;
+.reference {
+  display: none;
 }
 
 .products__button {
-  cursor: pointer;
-  display: flex;
+  position: absolute;
+  bottom: 6%;
+  right: 42%;
   width: 40px;
   height: 40px;
-  margin: 0 auto;
-  align-items: center;
-  justify-content: center;
   border-radius: 50%;
   background: $main-white-color;
   border: none;
@@ -297,7 +272,33 @@ h6 {
   transition-timing-function: $timing-function;
   &:hover,
   &:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-      1px 4px 6px rgba(0, 0, 0, 0.16);
+    background-image: linear-gradient(90deg, #d0ffd7 0%, #f8f7a9 49%, #f7dce6 80%, #f7f89b 100%);
+    animation: slidebg 5s linear infinite;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   }
+
+  @keyframes slidebg {
+    to {
+      background-position: 20vw;
+    }
+  }
+
+  @media screen and(min-width: 768px) {
+    bottom: 8%;
+    right: 40%;
+  }
+  @media screen and(min-width: 1280px) {
+    bottom: 9%;
+    right: 44%;
+  }
+}
+
+.products__icon {
+  position: absolute;
+  bottom: 36%;
+  right: 36%;
+  display: block;
+  width: 11px;
+  height: 11px;
+  fill: $accent-color;
 }
