@@ -22,6 +22,7 @@
   transition-property: border;
   transition-duration: $transition-duration;
   transition-timing-function: $timing-function;
+  border-radius: 50%;
   &:hover,
   &:focus {
     border: 1px solid $accent-color;

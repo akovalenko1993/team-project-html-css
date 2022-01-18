@@ -1,9 +1,10 @@
 .modal-container {
+  background: $main-white-color;
   background-image: linear-gradient(
       90deg,
       rgba(240, 84, 181, 0.5701855742296919) 0%,
       rgba(255, 255, 255, 0.6270483193277311) 50%,
-      rgba(69, 252, 197, 0.9) 100%
+      rgba(69, 252, 197, 0.3) 100%
     ),
     url('/images/Modal/ice-cream.png');
   background-repeat: no-repeat;
@@ -48,7 +49,7 @@
   height: 30px;
   justify-content: center;
   border-radius: 50%;
-  background: rgba(214, 194, 205, 0.9);
+  background: rgba(240, 194, 205, 0.9);
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   transition-property: border;
@@ -176,7 +177,8 @@
   transform: translate(50%);
 }
 .button-send-form {
-  background: #ffffff;
+  color: #000000;
+  background-color: #ffa5ba;
   border-radius: 22px;
   width: 180px;
   height: 44px;
@@ -192,10 +194,9 @@
   text-align: center;
   display: flex;
   margin: 0 auto;
-  color: #000000;
   border: none;
   &:hover {
-    background: #d41342;
-    color: #ffffff;
+    background: #ffffff;
+    color: #000000;
   }
 }
