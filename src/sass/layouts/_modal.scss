@@ -92,13 +92,15 @@
 
 .modal__title {
   margin-bottom: 12px;
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 700;
+  font-family: $secondary-font;
   font-size: 20px;
   line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
   color: $vector-home-color;
+  @media screen and (min-width: 1280px) {
+    font-size: 23px;
+  }
 }
 
 .modal__label {
