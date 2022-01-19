@@ -1,0 +1,25 @@
+.scroll-top {
+  opacity: 1;
+  position: fixed;
+  right: 10px;
+  bottom: 45px;
+  font-size: 40px;
+  z-index: 9999;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(225, 121, 146, 0.2);
+  border: none;
+  cursor: pointer;
+  transition: 1.5s;
+  &_hide {
+    opacity: 0;
+    transition: 1.5s;
+  }
+  &__icon {
+    fill: rgba(212, 20, 67, 0.5);
+  }
+}
