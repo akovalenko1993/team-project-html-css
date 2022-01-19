@@ -16,10 +16,6 @@
       width: 768px;
       padding: 0 34px;
     }
-    // @media screen and (min-width: 1200px) {
-    //   width: 1200px;
-    //   padding: 0 46px;
-    // }
     @media screen and (min-width: 1280px) {
       width: 1280px;
     }
@@ -64,7 +60,7 @@
 
 .is-show {
   // opacity: 0;
-  transform: translateX(100%);
+  transform: translateX(110%);
   transition: transform 1s $timing-function;
   pointer-events: none;
 }
@@ -78,6 +74,9 @@
   background-color: #e17992;
   z-index: 5;
   transition: transform 1s $timing-function;
+  @media screen and (min-width: 480px) {
+    width: 254px;
+  }
   @media screen and (min-width: 768px) {
     width: 254px;
   }
