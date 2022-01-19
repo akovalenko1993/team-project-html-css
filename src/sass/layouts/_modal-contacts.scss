@@ -62,6 +62,7 @@
   }
 }
 .modal-container__svg {
+  width: 18px;
   fill: #000000;
   background-color: transparent;
 }
@@ -188,9 +189,9 @@
 }
 .form__modal__icon {
   position: absolute;
-  top: 55%;
-  left: 10px;
-  transform: translate(50%);
+  top: 0;
+  left: 0;
+  transform: translate(13px, 29px);
   fill: $third-text-color;
   transition-property: fill;
   transition-duration: $transition-duration;
