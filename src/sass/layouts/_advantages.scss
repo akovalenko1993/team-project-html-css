@@ -91,11 +91,9 @@
     font-size: 48px;
     line-height: 1.15;
     margin-top: 36px;
-    margin-bottom: 13px;
   }
   @media screen and (min-width: 1280px) {
     margin-top: 40px;
-    margin-bottom: 15px;
     font-size: 58px;
     line-height: 1.14;
   }
@@ -108,10 +106,12 @@
   color: #000000;
   margin-top: 16px;
   @media screen and (min-width: 768px) {
+    margin-top: 13px;
     font-size: 14px;
     width: 100%;
   }
   @media screen and (min-width: 1280px) {
+    margin-top: 15px;
     font-size: 16px;
     letter-spacing: 0.02em;
   }
