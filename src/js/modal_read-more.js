@@ -5,10 +5,10 @@
     modal: document.querySelector('[data-modal-about]'),
   };
 
-  refs.openModalBtn.addEventListener('click', toggleModal);
-  refs.closeModalBtn.addEventListener('click', toggleModal);
+  refs.openModalBtn.addEventListener('click', toggleModalReadMore);
+  refs.closeModalBtn.addEventListener('click', toggleModalReadMore);
 
-  function toggleModal() {
+  function toggleModalReadMore() {
     refs.modal.classList.toggle('is-hidden');
   }
 })();
