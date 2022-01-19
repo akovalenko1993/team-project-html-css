@@ -9,7 +9,7 @@
     padding-bottom: 18px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     padding-top: 125px;
     padding-bottom: 10px;
   }
@@ -24,7 +24,7 @@
       padding-bottom: 91px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1280px) {
       padding-bottom: 97px;
     }
   }
@@ -47,7 +47,7 @@
       width: 340px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1280px) {
       width: 472px;
     }
   }
@@ -62,7 +62,7 @@
       @include font(26px, 1.15, $secondary-accent-color, $secondary-font);
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1280px) {
       @include font(30px, 1.13, $secondary-accent-color, $secondary-font);
     }
   }
@@ -80,7 +80,7 @@
       @include font(48px, 1.15, $accent-color, $secondary-font, 0.06em);
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1280px) {
       margin-top: 15px;
 
       width: 477px;
@@ -103,7 +103,7 @@
       width: 162px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1280px) {
       width: 151px;
     }
   }
@@ -172,7 +172,7 @@
       @include font(14px, 1.86, $third-text-color, $main-font, 0.02em);
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1280px) {
       margin-top: 9px;
 
       width: 100%;
