@@ -52,6 +52,10 @@
   min-width: 160px;
   @media screen and (min-width: 768px) {
     display: block;
+    &:hover,
+    &:focus {
+      background-color: $btn-hover-color;
+    }
   }
   @media screen and (min-width: 1280px) {
     margin-left: 110px;
@@ -78,7 +82,10 @@
     width: 254px;
   }
   @media screen and (min-width: 768px) {
-    width: 254px;
+    width: 39vw;
+  }
+  @media screen and (min-width: 1280px) {
+    display: none;
   }
 
   &__close {
@@ -106,11 +113,6 @@
   border-radius: 22px;
 
   transition: color $transition-duration $timing-function;
-  &:hover,
-  &:focus {
-    background-color: $btn-accent-hover-color;
-    color: $btn-hover-color;
-  }
 }
 
 .header__btn--mob {
@@ -123,6 +125,11 @@
   margin-top: 23px;
   margin-right: auto;
   margin-left: auto;
+  &:hover,
+  &:focus {
+    background-color: $btn-accent-hover-color;
+    color: $btn-hover-color;
+  }
 }
 
 .mob-menu__item {
@@ -172,4 +179,8 @@
   &__link:hover {
     color: $accent-color;
   }
+}
+
+.current {
+  color: $accent-color;
 }
