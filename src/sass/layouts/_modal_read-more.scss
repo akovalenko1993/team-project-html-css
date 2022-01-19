@@ -32,9 +32,9 @@
       rgba(255, 255, 255, 0.5270483193277311) 50%,
       rgba(69, 252, 197, 0.2) 100%
     ),
-    url('/images/Hero-header/slider-girl.png');
+    url('/images/About/about-bg.png');
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: bottom;
   background-size: contain;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -47,7 +47,11 @@
   }
   @media screen and (min-width: 480px) {
     width: 450px;
-    height: 609px;
+    height: 450px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 500px;
+    height: 510px;
   }
   @media screen and (min-width: 1280px) {
     width: 528px;
@@ -91,23 +95,33 @@
 }
 
 .modal__title-about {
+  margin-bottom: 20px;
   font-family: $secondary-font;
   font-style: normal;
   font-weight: normal;
-  font-size: 34px;
+  font-size: 28px;
   line-height: 1.15;
   text-align: center;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: $accent-color;
+  @media screen and (min-width: 768px) {
+    font-size: 34px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 38px;
+  }
 }
 
 .modal__about-info-list {
 }
 
 .modal__about-info-item {
+  margin-bottom: 15px;
 }
+
 .modal__subtitle-about {
+  margin-bottom: 5px;
   font-family: $secondary-font;
   font-style: normal;
   font-weight: normal;
@@ -115,13 +129,27 @@
   line-height: 1.16;
   text-align: center;
   text-transform: uppercase;
-  color: $secondary-accent-color;
+  color: $menu-bg-color;
+  @media screen and (min-width: 768px) {
+    font-size: 22px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 24px;
+  }
 }
 
 .modal__about-text {
   font-family: $main-font;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.58;
   color: $third-text-color;
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    font-size: 15px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 18px;
+    line-height: 1.35;
+  }
 }
