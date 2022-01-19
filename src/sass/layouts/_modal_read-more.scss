@@ -53,10 +53,6 @@
     width: 500px;
     height: 510px;
   }
-  @media screen and (min-width: 1280px) {
-    width: 528px;
-    height: 581px;
-  }
 }
 
 .modal__button-about {
@@ -108,9 +104,6 @@
   @media screen and (min-width: 768px) {
     font-size: 34px;
   }
-  @media screen and (min-width: 1280px) {
-    font-size: 38px;
-  }
 }
 
 .modal__about-info-list {
@@ -133,9 +126,6 @@
   @media screen and (min-width: 768px) {
     font-size: 22px;
   }
-  @media screen and (min-width: 1280px) {
-    font-size: 24px;
-  }
 }
 
 .modal__about-text {
@@ -147,9 +137,5 @@
   text-align: center;
   @media screen and (min-width: 768px) {
     font-size: 15px;
-  }
-  @media screen and (min-width: 1280px) {
-    font-size: 18px;
-    line-height: 1.35;
   }
 }
