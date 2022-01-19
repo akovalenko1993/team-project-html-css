@@ -62,10 +62,17 @@
   }
 }
 .modal-container__svg {
+  transition-property: fill;
+  transition-duration: $transition-duration;
+  transition-timing-function: $timing-function;
   width: 18px;
   fill: #000000;
   background-color: transparent;
 }
+.modal-container__button:hover .modal-container__svg {
+  fill: #d41443;
+}
+
 .modal-container__title {
   font-family: Titan One;
   font-style: normal;
@@ -225,3 +232,8 @@
     color: #000000;
   }
 }
+
+// &:hover,
+//   &:focus {
+//     border: 1px solid $accent-color;
+//   }

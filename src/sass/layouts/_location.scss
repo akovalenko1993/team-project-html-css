@@ -28,6 +28,15 @@
     border: 1px solid $accent-color;
   }
 }
+.modal-container__svg {
+  transition-property: fill;
+  transition-duration: $transition-duration;
+  transition-timing-function: $timing-function;
+}
+.location__button:hover .modal-container__svg {
+  fill: #d41443;
+}
+
 .location {
   padding: 0;
   padding-left: 15px;
@@ -57,3 +66,8 @@
   opacity: 0;
   pointer-events: none;
 }
+
+// &:hover,
+//   &:focus {
+//     border: 1px solid $accent-color;
+//   }
