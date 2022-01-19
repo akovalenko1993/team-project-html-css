@@ -1,0 +1,127 @@
+.backdrop-about {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(66, 12, 37, 0.2);
+  opacity: 1;
+  z-index: 10;
+  transition-property: opacity;
+  transition-duration: $transition-duration;
+  transition-timing-function: $timing-function;
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    opacity: 0;
+  }
+}
+
+.modal-about {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 96%;
+  height: auto;
+  padding: 40px;
+  background: $main-white-color;
+  background-image: linear-gradient(
+      90deg,
+      rgba(240, 84, 181, 0.3701855742296919) 0%,
+      rgba(255, 255, 255, 0.5270483193277311) 50%,
+      rgba(69, 252, 197, 0.2) 100%
+    ),
+    url('/images/Hero-header/slider-girl.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition-property: transform;
+  transition-duration: $transition-duration;
+  transition-timing-function: $timing-function;
+  .backdrop-about.is-hidden & {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  @media screen and (min-width: 480px) {
+    width: 450px;
+    height: 609px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 528px;
+    height: 581px;
+  }
+}
+
+.modal__button-about {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(214, 194, 205, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  transition-property: border;
+  transition-duration: $transition-duration;
+  transition-timing-function: $timing-function;
+  &:hover,
+  &:focus {
+    border: 1px solid $accent-color;
+  }
+}
+
+.modal__close {
+  width: 18px;
+  height: 18px;
+  fill: $second-text-color;
+  transition-property: fill;
+  transition-duration: $transition-duration;
+  transition-timing-function: $timing-function;
+  .modal__button:hover &,
+  .modal__button:focus & {
+    fill: $accent-color;
+  }
+}
+
+.modal__title-about {
+  font-family: $secondary-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 34px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $accent-color;
+}
+
+.modal__about-info-list {
+}
+
+.modal__about-info-item {
+}
+.modal__subtitle-about {
+  font-family: $secondary-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.16;
+  text-align: center;
+  text-transform: uppercase;
+  color: $secondary-accent-color;
+}
+
+.modal__about-text {
+  font-family: $main-font;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.58;
+  color: $third-text-color;
+}
