@@ -10,7 +10,7 @@ window.onscroll = () => {
     }
     };
     
-    scrollBtn.onclick = () => {
-        window.scrollTo(0, 0);
-}
+//     // scrollBtn.onclick = () => {
+//     //     window.scrollTo(0, 0);
+// }
 })();
