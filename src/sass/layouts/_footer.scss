@@ -118,6 +118,10 @@
     background-color: #fea5bb;
     border-radius: 50%;
 
+    transition-property: background-color;
+    transition-duration: $transition-duration;
+    transition-timing-function: $timing-function;
+
     @media screen and (min-width: 768px) {
       width: 34px;
       height: 34px;

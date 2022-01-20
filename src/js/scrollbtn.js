@@ -1,6 +1,6 @@
 (() => {
 
-const scrollBtn = document.querySelector('.scroll-top')
+    const scrollBtn = document.querySelector('.scroll-top')
 
 window.onscroll = () => {
     if (window.scrollY > 410) {
@@ -10,7 +10,7 @@ window.onscroll = () => {
     }
     };
     
-    scrollBtn.onclick = () => {
-        window.scrollTo(0, 0);
-}
+//     // scrollBtn.onclick = () => {
+//     //     window.scrollTo(0, 0);
+// }
 })();

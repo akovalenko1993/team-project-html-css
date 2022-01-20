@@ -35,10 +35,10 @@
     padding-bottom: 40px;
     background-image: url(../images/contactsbg-1x.png),
       linear-gradient(180deg, $main-white-color 165px, $secondary-bg-color 0, $secondary-bg-color);
-    background-repeat: no-repeat, no-repeat;
-    background-position-y: 40%;
-    background-position-x: 0;
-    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center 40%;
+    // background-size: contain;
+
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: url(../images/contactsbg-2x.png),
         linear-gradient(180deg, $main-white-color 165px, $secondary-bg-color 0, $secondary-bg-color);
@@ -210,10 +210,11 @@
   color: $third-text-color;
   letter-spacing: 0.04em;
   line-height: 1.5;
-  transition: $transition-duration, $timing-function;
+  transition: color $transition-duration $timing-function;
   @media screen and (min-width: 768px) {
     font-size: 14px;
     line-height: 1.85;
+    transition: color $transition-duration $timing-function;
   }
   @media screen and (min-width: 1280px) {
     font-size: 16px;
@@ -225,6 +226,7 @@
 .contacts__tel-link:focus,
 .contacts__mail-link:focus {
   color: $accent-color;
+  transition: color $transition-duration $timing-function;
 }
 .contacts__subtitle-foodtruck {
   text-transform: uppercase;
@@ -257,6 +259,13 @@
     flex-direction: row;
   }
 }
+.contacts__btn {
+  margin-bottom: 10px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+    margin-right: 14px;
+  }
+}
 .contacts__location-btn {
   font-family: $main-font;
   font-weight: 700;
@@ -274,19 +283,23 @@
   width: 161.45px;
   height: 44px;
   padding: 10px 17px;
-  transition: color, $transition-duration, $timing-function, background-color, $transition-duration,
-    $timing-function;
-  margin-bottom: 10px;
+  transition: color $transition-duration $timing-function,
+    background-color $transition-duration $timing-function;
+  // margin-bottom: 10px;
   @media screen and (min-width: 768px) {
-    margin-bottom: 0;
-    margin-right: 14px;
+    // margin-bottom: 0;
+    // margin-right: 14px;
     width: 190px;
+    transition: color $transition-duration $timing-function,
+      background-color $transition-duration $timing-function;
   }
 }
 .contacts__location-btn:focus,
 .contacts__location-btn:hover {
   color: $accent-color;
   background-color: $main-white-color;
+  transition: color $transition-duration $timing-function,
+    background-color $transition-duration $timing-function;
 }
 
 .contacts__franchise-btn {
@@ -306,10 +319,12 @@
   width: 161.45px;
   height: 44px;
   padding: 10px 17px;
-  transition: color, $transition-duration, $timing-function, background-color, $transition-duration,
-    $timing-function;
+  transition: color $transition-duration $timing-function,
+    background-color $transition-duration $timing-function;
   @media screen and (min-width: 768px) {
     width: 190px;
+    transition: color $transition-duration $timing-function,
+      background-color $transition-duration $timing-function;
   }
 }
 
@@ -317,4 +332,6 @@
 .contacts__franchise-btn:hover {
   color: $main-white-color;
   background-color: $accent-color;
+  transition: color $transition-duration $timing-function,
+    background-color $transition-duration $timing-function;
 }
